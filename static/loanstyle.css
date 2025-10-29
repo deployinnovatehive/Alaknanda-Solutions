@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 78px;
+}
+
+.logo h2 {
+  display: inline-block;
+  margin-right: 8px;
+  color: #000;
+}
+
+.logo span {
+  font-weight: 600;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  animation: navbarMenuFadeUp 0.7s ease 0.5s backwards;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #0056b3;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,123,255,0.15);
+}
+
+@keyframes navbarMenuFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-secondary {
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  animation: navbarMenuFadeUp 0.7s ease 0.5s backwards;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #0056b3;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,123,255,0.15);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 5%;
+  background: #dde6fb;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 3rem 10%;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Loans Section */
+.loans {
+  background: #f5f7fa;
+  padding: 3rem 5%;
+}
+
+.loans h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.loan-card {
+  display: flex;
+  background: #fff;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.loan-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 28px rgba(0, 123, 255, 0.15);
+}
+
+.loan-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.loan-card img {
+  width: 50%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.loan-info {
+  flex: 1;
+  padding: 2rem;
+}
+
+.loan-info h3 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.loan-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.loan-details div {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 3rem 10%;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 1rem;
+  border-left: 3px solid #007bff;
+  background: #fdfdfd;
+}
+
+/* CTA Section */
+.cta {
+  background: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cta button {
+  margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f8f8;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .loan-card,
+  .loan-card.reverse {
+    flex-direction: column;
+  }
+
+  .loan-card img {
+    width: 100%;
+  }
+}
